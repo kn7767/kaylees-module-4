@@ -1,0 +1,28 @@
+:root {
+    --align: center; 
+    --margin: 30px 60px 0px 60px;
+    --bborder: 0px;
+    --bradius: 15%;
+}
+
+.intropage {
+    text-align: center;
+    margin: var(--margin);
+    padding-top: 40px;
+}
+#start {
+    padding: 10px 20px 10px 20px;
+    background-color: lightgreen;
+    border: var(--bborder);
+    border-radius: var(--bradius);
+    font-weight: bold;
+}
+#start:hover {
+    background-color: rgb(0, 184, 0);
+}
+.allquestions > section > input {
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    flex: 50%;
+
+}
