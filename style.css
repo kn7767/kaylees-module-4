@@ -4,7 +4,7 @@
     --bborder: 0px;
     --bradius: 15%;
 }
-
+/*Start page*/
 .intropage {
     text-align: center;
     margin: var(--margin);
@@ -20,9 +20,26 @@
 #start:hover {
     background-color: rgb(0, 184, 0);
 }
+/* timer */
+.timersec {
+    text-align: right;
+    size: 16px;
+    margin-right: 60px;
+}
+
+/*Questions*/
+.allquestions > section {
+    margin: 0px 60px 0px 60px;
+}
 .allquestions > section > input {
     padding: 10px 20px 10px 20px;
     display: flex;
-    flex: 50%;
-
+    width: 100%;
+    background-color: orange;
+    border: var(--bborder);
+    border-radius: 10px;
+    margin: 2px;
+}
+.allquestions > section > input:hover {
+    background-color: darkgoldenrod;
 }
