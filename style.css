@@ -2,7 +2,7 @@
     --align: center; 
     --margin: 30px 60px 0px 60px;
     --bborder: 0px;
-    --bradius: 15%;
+    --bradius: 10px;
 }
 /*Start page*/
 .intropage {
@@ -37,7 +37,7 @@
     width: 100%;
     background-color: orange;
     border: var(--bborder);
-    border-radius: 10px;
+    border-radius: var(--bradius);
     margin: 2px;
 }
 .allquestions > section > input:hover {
