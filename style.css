@@ -1,10 +1,9 @@
 :root {
-    --align: center; 
     --margin: 30px 60px 0px 60px;
     --bborder: 0px;
     --bradius: 10px;
 }
-/*Start page*/
+/*Introduction page*/
 .intropage {
     text-align: center;
     margin: var(--margin);
@@ -22,13 +21,24 @@
 }
 /* timer */
 .timersec {
+    display: none;
     text-align: right;
     size: 16px;
     margin-right: 60px;
 }
 
+#correctanswer {
+    display: none;
+    text-align: center;
+}
+#incorrectanswer {
+    display: none;
+    text-align: center;
+}
+
 /*Questions*/
 .allquestions > section {
+    display: none;
     margin: 0px 60px 0px 60px;
 }
 .allquestions > section > input {
@@ -42,4 +52,9 @@
 }
 .allquestions > section > input:hover {
     background-color: darkgoldenrod;
+}
+
+#results {
+    display: none;
+    text-align: center;
 }

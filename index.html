@@ -15,79 +15,59 @@
         <input type="button" id="start" value="START"/>
     </main>
 
-    <!--Quiz questions-->
+    <!--Timer-->
     <header class="timersec">
         <div>Quiz Challenge</div>
         <div class="timer">
             <div>Time left:</div>
-            <div id="countdown">2:00</div>
+            <div id="countdown">1:00</div>
         </div>
     </header>
+    <!-- Quiz Questions -->
 <section class="allquestions">
+        <H1 id="correctanswer">Correct!</H1>
+        <h1 id="incorrectanswer">Incorrect!</h1>
     <section id="question1">
         <h3>Question 1</h3>
-            <input type="button" value="Option 1">
-            <input type="button" value="Option 2">
-            <input type="button" value="Option 3">
-            <input type="button" value="Option 4">
+            <input type="button" value="Option 1" class="correct">
+            <input type="button" value="Option 2" class="incorrect">
+            <input type="button" value="Option 3" class="incorrect">
+            <input type="button" value="Option 4" class="incorrect">
     </section>
     <section id="question2">
         <h3>Question 2</h3>
-        <input type="button" value="Option 1">
-        <input type="button" value="Option 2">
-        <input type="button" value="Option 3">
-        <input type="button" value="Option 4">
-
+        <input type="button" value="Option 1" class="incorrect">
+        <input type="button" value="Option 2" class="incorrect">
+        <input type="button" value="Option 3" class="correct">
+        <input type="button" value="Option 4" class="incorrect">
     </section>
     <section id="question3">        
         <h3>Question 3</h3>
-        <input type="button" value="Option 1">
-        <input type="button" value="Option 2">
-        <input type="button" value="Option 3">
-        <input type="button" value="Option 4">
-
+        <input type="button" value="Option 1" class="incorrect">
+        <input type="button" value="Option 2" class="correct">
+        <input type="button" value="Option 3" class="incorrect">
+        <input type="button" value="Option 4" class="incorrect">
     </section>
     <section id="question4">
         <h3>Question 4</h3>
-        <input type="button" value="Option 1">
-        <input type="button" value="Option 2">
-        <input type="button" value="Option 3">
-        <input type="button" value="Option 4">
-
+        <input type="button" value="Option 1" class="incorrect">
+        <input type="button" value="Option 2" class="incorrect">
+        <input type="button" value="Option 3" class="incorrect">
+        <input type="button" value="Option 4" class="correct">
     </section>
     <section id="question5">
         <h3>Question 5</h3>
-        <input type="button" value="Option 1">
-        <input type="button" value="Option 2">
-        <input type="button" value="Option 3">
-        <input type="button" value="Option 4">
+        <input type="button" value="Option 1" class="correct">
+        <input type="button" value="Option 2" class="incorrect">
+        <input type="button" value="Option 3" class="incorrect">
+        <input type="button" value="Option 4" class="incorrect">
 
-    </section>
-    <section id="question6">
-        <h3>Question 6</h3>
-        <input type="button" value="Option 1">
-        <input type="button" value="Option 2">
-        <input type="button" value="Option 3">
-        <input type="button" value="Option 4">
-
-    </section>
-    <section id="question7">
-        <h3>Question 7</h3>
-        <input type="button" value="Option 1">
-        <input type="button" value="Option 2">
-        <input type="button" value="Option 3">
-        <input type="button" value="Option 4">
-
-    </section>
-    <section id="question8">
-        <h3>Question 8</h3>
-        <input type="button" value="Option 1">
-        <input type="button" value="Option 2">
-        <input type="button" value="Option 3">
-        <input type="button" value="Option 4">
     </section>
 </section>
-<!-- results appear in js -->
+<!-- Results page -->
+<section>
+    <h3 id="results">Time's up! Here are your results:</h3>
+</section>
 <script src="script.js"></script>
 </body>
 </html>
