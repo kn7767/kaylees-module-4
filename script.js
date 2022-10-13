@@ -14,19 +14,18 @@ var allquestions = document.querySelector(".allquestions");
 
 //timer section
 var countdown = document.getElementById('countdown');
-var startTime = 10; //60 second place holder 
+var startTime = 60; //60 second place holder 
 
 function runCountdown() {
     var timerInterval = setInterval(function(){
         startTime--;
         countdown.textContent = "0:" + startTime;
 
-        if(startTime === 0) {
+        if(startTime < 0) {
             clearInterval(timerInterval);
             outofTime();
         }
     }, 1000);
-    //hides introduction
     intropage.style.display = "none";
     }
 
@@ -42,30 +41,71 @@ var q5 = document.getElementById('question5');
 var timerHead = document.querySelector(".timersec");
 
 function startQuestions(){
-    if (startTime === 10) { //5=placeholder
+    if (startTime === 60) { //5=placeholder
         timerHead.style.display = "inline";
         q1.style.display = "inline";
     }
 }
 
-var correct = document.querySelector(".correct");
-var incorrect = document.querySelector (".incorrect");
-var correctans = document.getElementById("correctanswer");
-var incorrectans = document.getElementById("incorrectanswer");
 
-function q1correct(){
-        correctans.style.display = "inline";
-        q1.style.display = "none";
-        q2.style.display = "inline";
-    
+var correct = document.querySelectorAll("input.correct");
+var incorrect = document.querySelectorAll('input.incorrect'); 
+var toques2 = document.getElementById("toq2");
+var toques3 = document.getElementById("toq3");
+var toques4 = document.getElementById("toq4");
+var toques5 = document.getElementById("toq5");
+
+///////
+function subtractTime () {
+    let subTime = startTime;
+    startTime -=5;
+    subTime.textContent = "0:" + startTime;
 }
-// correct.addEventListener("click", q1correct);
+for (let i = 0; i < correct.length; i++) {
+correct[i].addEventListener("click", () => {
+    correct[i].style.backgroundColor = "green";
+    toques2.style.display ="inline"
+})};
 
-correct.addEventListener("click", () => {
-    correct.style.backgroundColor = "green";
+for (let i = 0; i < incorrect.length; i++) {
+incorrect[i].addEventListener("click", () => {
+    incorrect[i].style.backgroundColor = "red";
+    subtractTime();
+})};
+
+function toq2() {
     q2.style.display = "inline";
-});
-incorrect.addEventListener("click", () => {
-    incorrect.style.backgroundColor = "red";
-    q2.style.display = "inline";
-});
+    q1.style.display = "none";
+    toques2.style.display = "none";
+}
+toques2.addEventListener("click", toq2);
+
+function toq3() {
+    q3.style.display = "inline";
+    q2.style.display = "none";
+    toques3.style.display = "none";
+}
+toques3.addEventListener("click", toq3);
+
+// for (let i = 0; i < correct.length; i++) {
+//     correct[i].addEventListener("click", () => {
+//         correct[i].style.backgroundColor = "green";
+//         toq3.style.display ="inline"
+//     })};
+    
+// for (let i = 0; i < incorrect.length; i++) {
+//     incorrect[i].addEventListener("click", () => {
+//         incorrect[i].style.backgroundColor = "red";
+//         toq3.style.display ="inline"
+//         subtractTime();
+//     })};
+// function toq3() {
+//     q3.style.display = "inline";
+//     q2.style.display = "none";
+// }
+// toq3.addEventListener("click", toq3);
+
+
+
+
+

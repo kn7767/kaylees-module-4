@@ -21,8 +21,12 @@ function runCountdown() {
     console.log(countdownEl);
 
     if (countdownEl === 0) {
-        //prompt that says "you lose!"
-    }
+        if(secondsLeft === 0) {
+            // Stops execution of action at set interval
+            clearInterval(timerInterval);
+            // Calls function to create and append image
+            sendMessage();
+          }    }
 };
 startbtn.addEventListener('click', runCountdown);
 
